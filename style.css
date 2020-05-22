@@ -1,0 +1,345 @@
+/* CSS Reset */
+/* Resetting margins, paddings, and borders */
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+body {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Resetting specific element styles */
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+/* Min height */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+/* General styling */
+body {
+  background: repeating-linear-gradient(
+    to left,
+  #88c054,
+  #88c054 40px,
+  #99c96c 40px,
+  #99c96c 80px
+  );
+}
+
+.container {
+  padding: 4.1rem 2rem;
+}
+
+.stadium {
+  border: 3px solid white;
+  height: 850px;
+  max-width: 650px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.center-circle, .center-spot  {
+  border: 2px solid white;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-circle {
+  height: 70px;
+  width: 70px;
+}
+.center-spot {
+  background-color: white;
+  height: 17%;
+  width: 17%;
+}
+
+.top-half, .bottom-half {
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+}
+.top-half {
+  border-bottom: 2px solid white;
+}
+.bottom-half {
+  align-items: flex-end;
+}
+
+.top-left-arc {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom-left-radius: 18px;
+  height: 18px;
+  transform: rotate(-90deg);
+  width: 18px;
+}
+.top-right-arc {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom-right-radius: 18px;
+  height: 18px;
+  transform: rotate(90deg);
+  width: 18px;
+}
+.bottom-right-arc {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom-left-radius: 18px;
+  height: 18px;
+  transform: rotate(90deg);
+  width: 18px;
+}
+.bottom-left-arc {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom-right-radius: 18px;
+  height: 18px;
+  transform: rotate(-90deg);
+  width: 18px;
+}
+
+.top-penalty-area, .bottom-penalty-area {
+  align-items: center;
+  border: 2px solid white;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 200px;
+}
+.bottom-penalty-area {
+  transform: rotate(180deg);
+}
+
+.top-goal-area, .bottom-goal-area {
+  border: 2px solid white;
+  height: 50%;
+  width: 50%;
+}
+.top-goal-area {
+  border-top: none;
+}
+.bottom-goal-area {
+  border-bottom: none;
+  transform: rotate(180deg);
+}
+
+.penalty-mark {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 7px;
+  margin-top: 20px;
+  width: 7px;
+}
+
+.top-penalty-area::after {
+  backface-visibility: hidden;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom-right-radius: 60px;
+  content: "";
+  height: 60px;
+  position: absolute;
+  top: 70px;
+  transform: rotate(45deg);
+  width: 60px;
+}
+.top-penalty-area::before {
+  border: 2px solid white;
+  border-bottom: none;
+  content: "";
+  height: 18px;
+  position: absolute;
+  top: -20px;
+  width: 40px;
+}
+.bottom-penalty-area::after {
+  backface-visibility: hidden;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom-right-radius: 60px;
+  content: "";
+  height: 60px;
+  position: absolute;
+  top: 69px;
+  transform: rotate(45deg);
+  width: 60px;
+}
+.bottom-penalty-area::before {
+  border: 2px solid white;
+  border-bottom: none;
+  content: "";
+  height: 18px;
+  position: absolute;
+  top: -20px;
+  width: 40px;
+}
+
+@media only screen and (max-width: 599px) {
+  .stadium {
+    height: 600px;
+  }
+  .center-circle {
+    height: 50px;
+    width: 50px;
+  }
+  .top-penalty-area, .bottom-penalty-area {
+    height: 50px;
+    width: 100px;
+  }
+  .top-penalty-area::after {
+    border-bottom-right-radius: 30px;
+    height: 30px;
+    top: 34px;
+    width: 30px;
+  }
+  .top-penalty-area::before {
+    height: 9px;
+    top: -12px;
+    width: 20px;
+  }
+  .bottom-penalty-area::after {
+    border-bottom-right-radius: 30px;
+    height: 30px;
+    top: 34px;
+    width: 30px;
+  }
+  .bottom-penalty-area::before {
+    height: 9px;
+    top: -12px;
+    width: 20px;
+  }
+  .penalty-mark {
+    height: 3.5px;
+    margin-top: 10px;
+    width: 3.5px;
+  }
+  .top-left-arc {
+    border-bottom-left-radius: 12px;
+    height: 12px;
+    width: 12px;
+  }
+  .top-right-arc {
+    border-bottom-right-radius: 12px;
+    height: 12px;
+    width: 12px;
+  }
+  .bottom-right-arc {
+    border-bottom-left-radius: 12px;
+    height: 12px;
+    width: 12px;
+  }
+  .bottom-left-arc {
+    border-bottom-right-radius: 12px;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .container {
+    padding: 5.7rem 2rem;
+  } 
+  .stadium {
+    height: 450px;
+  }
+  .center-circle {
+    height: 40px;
+    width: 40px;
+  }
+  .top-penalty-area, .bottom-penalty-area {
+    height: 40px;
+    width: 80px;
+  }
+  .top-penalty-area::after {
+    border-bottom-right-radius: 24px;
+    height: 24px;
+    top: 28px;
+    width: 24px;
+  }
+  .top-penalty-area::before {
+    height: 7.2px;
+    top: -10px;
+    width: 16px;
+  }
+  .bottom-penalty-area::after {
+    border-bottom-right-radius: 24px;
+    height: 24px;
+    top: 28px;
+    width: 24px;
+  }
+  .bottom-penalty-area::before {
+    height: 7.2px;
+    top: -10px;
+    width: 16px;
+  }
+  .penalty-mark {
+    margin-top: 8px;
+  }
+}
