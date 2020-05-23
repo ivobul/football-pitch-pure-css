@@ -269,25 +269,16 @@ body {
     margin-top: 10px;
     width: 3.5px;
   }
-  .top-left-arc {
+  .top-left-arc, .top-right-arc, 
+  .bottom-right-arc, .bottom-left-arc {
+    height: 12px;
+    width: 12px;
+  }
+  .top-left-arc, .bottom-right-arc {
     border-bottom-left-radius: 12px;
-    height: 12px;
-    width: 12px;
   }
-  .top-right-arc {
+  .top-right-arc, .bottom-left-arc {
     border-bottom-right-radius: 12px;
-    height: 12px;
-    width: 12px;
-  }
-  .bottom-right-arc {
-    border-bottom-left-radius: 12px;
-    height: 12px;
-    width: 12px;
-  }
-  .bottom-left-arc {
-    border-bottom-right-radius: 12px;
-    height: 12px;
-    width: 12px;
   }
 }
 
