@@ -31,7 +31,6 @@ tr, th, td {
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -41,13 +40,11 @@ body {
   font-size: 1rem;
   line-height: 1.4;
 }
-
 * {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-
 a,
 a:visited {
   color: inherit;
@@ -58,7 +55,6 @@ img,
 video {
   max-width: 100%;
 }
-
 img {
   border-style: none;
 }
@@ -67,7 +63,6 @@ img {
 html {
   height: 100%;
 }
-
 body {
   min-height: 100%;
 }
@@ -75,7 +70,7 @@ body {
 /* General styling */
 body {
   background: repeating-linear-gradient(
-    to left,
+  to left,
   #88c054,
   #88c054 40px,
   #99c96c 40px,
