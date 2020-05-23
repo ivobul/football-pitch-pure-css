@@ -130,37 +130,26 @@ body {
   align-items: flex-end;
 }
 
-.top-left-arc {
+.top-left-arc, .top-right-arc, 
+.bottom-right-arc, .bottom-left-arc {
+  height: 18px;
+  width: 18px;
+}
+.top-left-arc, .bottom-right-arc {
   border-bottom: 2px solid white;
   border-left: 2px solid white;
   border-bottom-left-radius: 18px;
-  height: 18px;
-  transform: rotate(-90deg);
-  width: 18px;
 }
-.top-right-arc {
+.top-right-arc, .bottom-left-arc {
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   border-bottom-right-radius: 18px;
-  height: 18px;
-  transform: rotate(90deg);
-  width: 18px;
 }
-.bottom-right-arc {
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom-left-radius: 18px;
-  height: 18px;
-  transform: rotate(90deg);
-  width: 18px;
-}
-.bottom-left-arc {
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  border-bottom-right-radius: 18px;
-  height: 18px;
+.top-left-arc, .bottom-left-arc {
   transform: rotate(-90deg);
-  width: 18px;
+}
+.top-right-arc, .bottom-right-arc {
+  transform: rotate(90deg);
 }
 
 .top-penalty-area, .bottom-penalty-area {
