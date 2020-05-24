@@ -83,7 +83,7 @@ body {
 }
 
 .stadium {
-  border: 3px solid white;
+  border: 2px solid white;
   height: 850px;
   max-width: 650px;
   position: relative;
@@ -222,7 +222,7 @@ body {
   }
   .top-penalty-area::before, .bottom-penalty-area::before {
     height: 9px;
-    top: -12px;
+    top: -11px;
     width: 20px;
   }
   
@@ -271,7 +271,7 @@ body {
   }
   .top-penalty-area::before, .bottom-penalty-area::before {
     height: 7.2px;
-    top: -10px;
+    top: -9px;
     width: 16px;
   }
   
