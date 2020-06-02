@@ -79,19 +79,22 @@ body {
 }
 
 .container {
-  padding: 4.1rem 2rem;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  padding: 0 2rem;
+  justify-content: center;
 }
 
 .stadium {
   border: 2px solid white;
   height: 850px;
-  max-width: 650px;
+  flex-basis: 650px;
   position: relative;
-  margin: 0 auto;
-  width: 100%;
 }
 
-.center-circle, .center-spot  {
+.center-circle, 
+.center-spot  {
   border: 2px solid white;
   border-radius: 50%;
   left: 50%;
@@ -109,7 +112,8 @@ body {
   width: 17%;
 }
 
-.top-half, .bottom-half {
+.top-half, 
+.bottom-half {
   display: flex;
   height: 50%;
   justify-content: space-between;
@@ -121,29 +125,36 @@ body {
   align-items: flex-end;
 }
 
-.top-left-arc, .top-right-arc, 
-.bottom-right-arc, .bottom-left-arc {
+.top-left-arc, 
+.top-right-arc, 
+.bottom-right-arc, 
+.bottom-left-arc {
   height: 18px;
   width: 18px;
 }
-.top-left-arc, .bottom-right-arc {
+.top-left-arc, 
+.bottom-right-arc {
   border-bottom: 2px solid white;
   border-left: 2px solid white;
   border-bottom-left-radius: 18px;
 }
-.top-right-arc, .bottom-left-arc {
+.top-right-arc, 
+.bottom-left-arc {
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   border-bottom-right-radius: 18px;
 }
-.top-left-arc, .bottom-left-arc {
+.top-left-arc, 
+.bottom-left-arc {
   transform: rotate(-90deg);
 }
-.top-right-arc, .bottom-right-arc {
+.top-right-arc, 
+.bottom-right-arc {
   transform: rotate(90deg);
 }
 
-.top-penalty-area, .bottom-penalty-area {
+.top-penalty-area, 
+.bottom-penalty-area {
   align-items: center;
   border: 2px solid white;
   border-top: none;
@@ -155,8 +166,32 @@ body {
 .bottom-penalty-area {
   transform: rotate(180deg);
 }
+.top-penalty-area::after, 
+.bottom-penalty-area::after {
+  backface-visibility: hidden;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom-right-radius: 60px;
+  content: "";
+  height: 60px;
+  position: absolute;
+  top: 70px;
+  transform: rotate(45deg);
+  width: 60px;
+}
+.top-penalty-area::before, 
+.bottom-penalty-area::before {
+  border: 2px solid white;
+  border-bottom: none;
+  content: "";
+  height: 18px;
+  position: absolute;
+  top: -20px;
+  width: 40px;
+}
 
-.top-goal-area, .bottom-goal-area {
+.top-goal-area, 
+.bottom-goal-area {
   border: 2px solid white;
   height: 50%;
   width: 50%;
@@ -178,31 +213,9 @@ body {
   width: 7px;
 }
 
-.top-penalty-area::after, .bottom-penalty-area::after {
-  backface-visibility: hidden;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  border-bottom-right-radius: 60px;
-  content: "";
-  height: 60px;
-  position: absolute;
-  top: 70px;
-  transform: rotate(45deg);
-  width: 60px;
-}
-.top-penalty-area::before, .bottom-penalty-area::before {
-  border: 2px solid white;
-  border-bottom: none;
-  content: "";
-  height: 18px;
-  position: absolute;
-  top: -20px;
-  width: 40px;
-}
-
 @media only screen and (max-width: 599px) {
   .stadium {
-    height: 600px;
+    height: 750px;
   }
   
   .center-circle {
@@ -210,17 +223,20 @@ body {
     width: 50px;
   }
   
-  .top-penalty-area, .bottom-penalty-area {
+  .top-penalty-area, 
+  .bottom-penalty-area {
     height: 50px;
     width: 100px;
   }
-  .top-penalty-area::after, .bottom-penalty-area::after {
+  .top-penalty-area::after, 
+  .bottom-penalty-area::after {
     border-bottom-right-radius: 30px;
     height: 30px;
     top: 34px;
     width: 30px;
   }
-  .top-penalty-area::before, .bottom-penalty-area::before {
+  .top-penalty-area::before, 
+  .bottom-penalty-area::before {
     height: 9px;
     top: -11px;
     width: 20px;
@@ -232,26 +248,26 @@ body {
     width: 3.5px;
   }
   
-  .top-left-arc, .top-right-arc, 
-  .bottom-right-arc, .bottom-left-arc {
+  .top-left-arc, 
+  .top-right-arc, 
+  .bottom-right-arc, 
+  .bottom-left-arc {
     height: 12px;
     width: 12px;
   }
-  .top-left-arc, .bottom-right-arc {
+  .top-left-arc, 
+  .bottom-right-arc {
     border-bottom-left-radius: 12px;
   }
-  .top-right-arc, .bottom-left-arc {
+  .top-right-arc, 
+  .bottom-left-arc {
     border-bottom-right-radius: 12px;
   }
 }
 
 @media only screen and (max-width: 399px) {
-  .container {
-    padding: 5.7rem 2rem;
-  } 
-  
   .stadium {
-    height: 450px;
+    height: 650px;
   }
   
   .center-circle {
@@ -259,17 +275,20 @@ body {
     width: 40px;
   }
   
-  .top-penalty-area, .bottom-penalty-area {
+  .top-penalty-area, 
+  .bottom-penalty-area {
     height: 40px;
     width: 80px;
   }
-  .top-penalty-area::after, .bottom-penalty-area::after {
+  .top-penalty-area::after, 
+  .bottom-penalty-area::after {
     border-bottom-right-radius: 24px;
     height: 24px;
     top: 28px;
     width: 24px;
   }
-  .top-penalty-area::before, .bottom-penalty-area::before {
+  .top-penalty-area::before, 
+  .bottom-penalty-area::before {
     height: 7.2px;
     top: -9px;
     width: 16px;
