@@ -31,28 +31,23 @@ tr, th, td {
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-/* Min height */
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
 }
 
 /* Typography */
 body {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
+
 * {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
+
 a,
 a:visited {
   color: inherit;
@@ -68,11 +63,12 @@ img,
 video {
   max-width: 100%;
 }
+
 img {
   border-style: none;
 }
 
-/* General styling */
+/* General styles */
 body {
   background: repeating-linear-gradient(
   to left,
@@ -86,9 +82,9 @@ body {
 .container {
   align-items: center;
   display: flex;
+  justify-content: center;
   min-height: 100vh;
   padding: 3rem 2rem;
-  justify-content: center;
 }
 
 .stadium {
